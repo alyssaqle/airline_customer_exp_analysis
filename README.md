@@ -5,7 +5,7 @@ This analysis covers **2,853 Delta Airlines reviews (2015–2025)** from Airline
 
 **Key finding:** Delta shows **low satisfaction**—**average rating 2.48/5** and **28.8% recommend rate**. Drivers differ by cabin class.
 
-Access the interactive dashboard **[HERE](https://drive.google.com/file/d/14oqN4O9WCQ8zSPgZSjKYU4uP3CDZYwiZ/view?usp=sharing)**  or **[Here](https://github.com/alyssaqle/airline_customer_exp_analysis/blob/main/reports/delta-satisfaction-dashboard.pdf)**
+Access the interactive dashboard **[HERE](https://drive.google.com/file/d/14oqN4O9WCQ8zSPgZSjKYU4uP3CDZYwiZ/view?usp=sharing)**  or **[HERE](https://github.com/alyssaqle/airline_customer_exp_analysis/blob/main/reports/delta-satisfaction-dashboard.pdf)**
 
 ---
 
