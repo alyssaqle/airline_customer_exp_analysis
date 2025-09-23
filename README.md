@@ -11,7 +11,7 @@ Access the interactive dashboard **[HERE](https://drive.google.com/file/d/14oqN4
 
 ## 2. Data Processing Workflow
 - **Extraction:** 100K+ airline reviews loaded into Snowflake and joined across aircraft, traveler type, and location dimensions.  
-- **Cleaning:** Normalized traveler type, seat type, and route names; missing values set to **“Unknown.”**  
+- **Cleaning:** Normalized traveler type, seat type, and route names; missing values set to **“Unknown”**  
 - **Segmentation:** Economy vs Non-Economy.  
 - **Features:** Verified review flag (48% verified).  
 - **Validation:** Checked for route/aircraft skew.
@@ -36,7 +36,7 @@ Access the interactive dashboard **[HERE](https://drive.google.com/file/d/14oqN4
 
 **Takeaway:** Economy satisfaction is driven by **staff service, seat comfort, and value perception**; food matters, while Wi-Fi and ground service are less decisive.
 
-### 3.3 Non-Economy Class — Correlation with Average Rating
+### 3.3 Non-Economy Class - Correlation with Average Rating
 - **Seat Comfort:** **0.86**  
 - **Value for Money:** **0.91**  
 - **Food & Beverages:** **0.78**  
@@ -46,7 +46,7 @@ Access the interactive dashboard **[HERE](https://drive.google.com/file/d/14oqN4
 **Takeaway:** Premium travelers are **highly sensitive to comfort and dining**; value remains critical, and **ground service** is relatively influential.
 
 ### 3.4 Route & Aircraft Highlights
-- **Top routes reviewed:** New York ↔ Atlanta, San Diego ↔ Atlanta, Los Angeles ↔ New York (ratings span ~**1.9–3.9**).  
+- **Top routes reviewed:** New York ↔ Atlanta, San Diego ↔ Atlanta, Los Angeles ↔ New York (ratings span ~**1.9 - 3.9**).  
 - **Aircraft models:** Majority **Unknown (~82%)**; among known, **Boeing 767/737** appear most.
 
 ---
@@ -56,7 +56,7 @@ Access the interactive dashboard **[HERE](https://drive.google.com/file/d/14oqN4
 ### Economy
 - Train for **friendliness/responsiveness** in cabin staff.  
 - **Upgrade menus** via better vendors and variety.  
-- Improve **seat ergonomics** (legroom, recline, cushions), especially for long-haul.
+- Improve **seat ergonomics** (legroom, recline, cushions), especially for long - haul.
 
 ### Non-Economy
 - Elevate **dining** (chef partnerships, premium suppliers).  
