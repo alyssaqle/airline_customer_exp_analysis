@@ -1,0 +1,11 @@
+"ORIGIN_CITY","DESTINATION_CITY","REVIEWS_COUNT","AVG_RATING"
+"Unknown","Unknown",106,2.93
+"San Diego","Atlanta",16,2.32
+"New York","Atlanta",12,2.47
+"London","New York",12,3.91
+"Los Angeles","San Diego",11,1.95
+"Atlanta","San Diego",11,2.04
+"Miami","Atlanta",10,1.96
+"San Diego","New York",10,2.25
+"New York","San Diego",10,2.33
+"Los Angeles","New York",10,3.23
