@@ -1,7 +1,7 @@
 # Delta Airline Customer Experience Analysis
 
 ## 1. Overview
-This analysis covers **2,853 Delta Airlines reviews (2015–2025)** from AirlineQuality.com. Using a **star-schema** in Snowflake SQL, we extracted and cleaned reviews, then segmented results into **Economy (78%)** and **Non-Economy (22%)** cabins. We used Pandas + Seaborn for correlation analysis and built Mode dashboards for KPI visualization.
+This analysis covers **2,853 Delta Airlines reviews (2015 - 2025)** from AirlineQuality.com. Using a **star-schema** in Snowflake SQL, I extracted and cleaned reviews, then segmented results into **Economy (78%)** and **Non-Economy (22%)** cabins. I used Pandas + Seaborn for correlation analysis and built Mode dashboards for KPI visualization.
 
 **Key finding:** Delta shows **low satisfaction** - **average rating 2.48/5** and **28.8% recommend rate**. Drivers differ by cabin class.
 
