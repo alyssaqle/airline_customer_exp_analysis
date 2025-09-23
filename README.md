@@ -3,7 +3,7 @@
 ## 1. Overview
 This analysis covers **2,853 Delta Airlines reviews (2015–2025)** from AirlineQuality.com. Using a **star-schema** in Snowflake SQL, we extracted and cleaned reviews, then segmented results into **Economy (78%)** and **Non-Economy (22%)** cabins. We used Pandas + Seaborn for correlation analysis and built Mode dashboards for KPI visualization.
 
-**Key finding:** Delta shows **low satisfaction**—**average rating 2.48/5** and **28.8% recommend rate**. Drivers differ by cabin class.
+**Key finding:** Delta shows **low satisfaction** - **average rating 2.48/5** and **28.8% recommend rate**. Drivers differ by cabin class.
 
 Access the interactive dashboard **[HERE](https://drive.google.com/file/d/14oqN4O9WCQ8zSPgZSjKYU4uP3CDZYwiZ/view?usp=sharing)**  or **[HERE](https://github.com/alyssaqle/airline_customer_exp_analysis/blob/main/reports/delta-satisfaction-dashboard.pdf)**
 
@@ -26,7 +26,7 @@ Access the interactive dashboard **[HERE](https://drive.google.com/file/d/14oqN4
 - **Traveler Types:** Solo Leisure **33.5%**, Couple Leisure **23%**, Family Leisure **25%**, Business **18.5%**  
 - **Seat Type:** **Economy 78%** of reviews
 
-### 3.2 Economy Class — Correlation with Average Rating
+### 3.2 Economy Class - Correlation with Average Rating
 - **Cabin Staff Service:** **0.84**  
 - **Seat Comfort:** **0.86**  
 - **Value for Money:** **0.91**  
