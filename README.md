@@ -1,81 +1,87 @@
 # Delta Airline Customer Experience Analysis
 
-## 1. Overview  
-This analysis covers **2,853 Delta Airlines reviews from 2010–2023**, sourced from AirlineQuality.com. Using a star-schema data model in **Snowflake SQL**, we extracted and cleaned reviews, then segmented results into **Economy (78% of reviews)** and **Non-Economy cabins**. We applied **Pandas + Seaborn** for correlation analysis and built **Mode dashboards** to visualize KPIs.  
+## 1. Overview
+This analysis covers **2,853 Delta Airlines reviews (2015–2025)** from AirlineQuality.com. Using a **star-schema** in Snowflake SQL, we extracted and cleaned reviews, then segmented results into **Economy (78%)** and **Non-Economy (22%)** cabins. We used Pandas + Seaborn for correlation analysis and built Mode dashboards for KPI visualization.
 
-**Key Finding:** Delta struggles with satisfaction: an **average rating of 2.48/5** and only **28.8% of passengers recommend** the airline. Drivers of satisfaction differ strongly by cabin class.  
+**Key finding:** Delta shows **low satisfaction**—**average rating 2.48/5** and **28.8% recommend rate**. Drivers differ by cabin class.
 
----
-
-## 2. Data Processing Workflow  
-- **Extraction:** 100K+ reviews of different airlines loaded into Snowflake and joined across dimensions (aircraft, traveler type, location).  
-- **Cleaning:** Normalized traveler type, seat type, and route names; missing values replaced with “Unknown.”  
-- **Segmentation:** Reviews split into **Economy (78%)** vs **Non-Economy (22%)**.  
-- **Features:** Flags for verified reviews (48% verified).  
-- **Validation:** Ensured no skew toward specific routes or aircraft.  
+Access the interactive dashboard **[HERE](https://drive.google.com/file/d/14oqN4O9WCQ8zSPgZSjKYU4uP3CDZYwiZ/view?usp=sharing)**  or **[Here](https://github.com/alyssaqle/airline_customer_exp_analysis/blob/main/reports/delta-satisfaction-dashboard.pdf)**
 
 ---
 
-## 3. Results  
-
-### 3.1 Overall Satisfaction  
-- **Average Rating:** 2.48/5  
-- **Recommendation Rate:** 28.8%  
-- **Most Common Travelers:** Leisure solo (33.5%) and leisure couple (25%).  
-- **Seat Type:** Economy dominates (78% of reviews).  
-
-### 3.2 Economy Class Correlations  
-- **Top Drivers:**  
-  - **Cabin Staff Service (0.84)**  
-  - **Food & Beverages (0.92)**  
-  - **Wi-Fi & Connectivity (0.94)**  
-  - **Value for Money (0.94)**  
-- **Secondary Drivers:** Seat Comfort (0.86), Ground Service (0.82).  
-- **Takeaway:** In Economy, satisfaction is built on **attentive staff, meal quality, and value perception**. Seat upgrades help long-haul travelers.  
-
-### 3.3 Non-Economy Class Correlations  
-- **Top Drivers:**  
-  - **Seat Comfort (0.87)**  
-  - **Food & Beverages (0.78)**  
-  - **Value for Money (0.89)**  
-- **Weaker Links:** Cabin Staff (0.76), Ground Service (0.61).  
-- **Takeaway:** Premium travelers are **highly sensitive to comfort and dining**. Even small drops in these areas sharply lower ratings.  
+## 2. Data Processing Workflow
+- **Extraction:** 100K+ airline reviews loaded into Snowflake and joined across aircraft, traveler type, and location dimensions.  
+- **Cleaning:** Normalized traveler type, seat type, and route names; missing values set to **“Unknown.”**  
+- **Segmentation:** Economy vs Non-Economy.  
+- **Features:** Verified review flag (48% verified).  
+- **Validation:** Checked for route/aircraft skew.
 
 ---
 
-## 4. Recommendations  
+## 3. Results
 
-**For Economy:**  
-1. Enhance staff friendliness and responsiveness through training.  
-2. Upgrade menus with better vendor partnerships and more variety.  
-3. Improve long-haul seat ergonomics (cushions, recline, legroom).  
+### 3.1 Overall Satisfaction
+- **Average Rating:** 2.48 / 5  
+- **Recommend Rate:** 28.8%  
+- **Traveler Types:** Solo Leisure **33.5%**, Couple Leisure **23%**, Family Leisure **25%**, Business **18.5%**  
+- **Seat Type:** **Economy 78%** of reviews
 
-**For Non-Economy:**  
-1. Elevate dining through chef collaborations and premium suppliers.  
-2. Invest in seat padding, adjustability, and space upgrades.  
-3. Implement fast feedback loops for premium passengers.  
+### 3.2 Economy Class — Correlation with Average Rating
+- **Cabin Staff Service:** **0.84**  
+- **Seat Comfort:** **0.86**  
+- **Value for Money:** **0.91**  
+- **Food & Beverages:** **0.82**  
+- **Ground Service:** **0.71**  
+- **Wi-Fi & Connectivity:** **0.64**
+
+**Takeaway:** Economy satisfaction is driven by **staff service, seat comfort, and value perception**; food matters, while Wi-Fi and ground service are less decisive.
+
+### 3.3 Non-Economy Class — Correlation with Average Rating
+- **Seat Comfort:** **0.86**  
+- **Value for Money:** **0.91**  
+- **Food & Beverages:** **0.78**  
+- **Cabin Staff Service:** **0.76**  
+- **Ground Service:** **0.83**
+
+**Takeaway:** Premium travelers are **highly sensitive to comfort and dining**; value remains critical, and **ground service** is relatively influential.
+
+### 3.4 Route & Aircraft Highlights
+- **Top routes reviewed:** New York ↔ Atlanta, San Diego ↔ Atlanta, Los Angeles ↔ New York (ratings span ~**1.9–3.9**).  
+- **Aircraft models:** Majority **Unknown (~82%)**; among known, **Boeing 767/737** appear most.
+
+---
+
+## 4. Recommendations
+
+### Economy
+- Train for **friendliness/responsiveness** in cabin staff.  
+- **Upgrade menus** via better vendors and variety.  
+- Improve **seat ergonomics** (legroom, recline, cushions), especially for long-haul.
+
+### Non-Economy
+- Elevate **dining** (chef partnerships, premium suppliers).  
+- Invest in **seat padding, adjustability, and space** upgrades.  
+- Create **fast feedback loops** for premium cabins to resolve issues quickly.
 
 ---
 
-## 5. Key Learnings  
-- **Technical:** Authored 20 Snowflake SQL queries; built Mode dashboards with drill-downs.  
-- **Analytical:** Economy vs Non-Economy segmentation revealed distinct satisfaction drivers.  
-- **Communication:** Converted correlation insights into actionable business recommendations.  
+## 5. Key Learnings
+- **Technical:** ~20 Snowflake SQL queries; Mode dashboards with drill-downs.  
+- **Analytical:** Economy vs Non-Economy segmentation reveals distinct drivers.  
+- **Communication:** Converted correlations into actionable initiatives.
 
 ---
 
-## 6. Limitations  
-- Scope limited to Delta (no competitor benchmarking).  
-- Correlation ≠ causation; operational factors (delays, aircraft age) not included.  
-- No predictive modeling yet.  
+## 6. Limitations
+- Delta-only (no competitor benchmark).  
+- **Correlation ≠ causation**; ops factors (delays, aircraft age) excluded.  
+- No predictive modeling yet.
 
 ---
 
-## 7. Next Steps  
-1. **Benchmark competitors** (United, American) for relative positioning.  
-2. **Sentiment analysis** of text reviews to capture qualitative themes.  
-3. **Predictive modeling** (e.g., logistic regression on recommendation likelihood).  
-4. **Integrate operations data** (delays, cancellations, aircraft age).  
-5. **Automate Mode pipelines** for monthly refresh.  
-
----
+## 7. Next Steps
+- **Benchmark** United and American for relative positioning.  
+- Run **sentiment analysis** on review text for themes.  
+- Build **predictive models** (e.g., logistic regression for recommend likelihood).  
+- Integrate **operations data** (delays, cancellations, aircraft age).  
+- **Automate** Mode pipelines for monthly refresh.
